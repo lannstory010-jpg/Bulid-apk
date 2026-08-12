@@ -96,7 +96,7 @@ jobs:
 
       - name: Analyze Project Code
         working-directory: ${{ env.PROJECT_DIR }}
-        run: |analyze
+        run: |
           if [ -f "pubspec.yaml" ]; then
             flutter analyze > analyze_report.txt 2>&1 || true
             echo "[RESULT_ANALYZE]"
